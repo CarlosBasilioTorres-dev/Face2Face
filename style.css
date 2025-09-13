@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation-card{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;   
+    
+    width: 100%;
+}
+
+.menu{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px 10px 0 0 ;
+    box-shadow: 0px -10px 10px rgba(0,0,0,.1);
+}
+
+.menu > div{
+    width: 18%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.menu > div > i{
+    font-size: 2rem;
+    color: rgba(0,0,0,.3);
+}
+
+.main i{
+    color: white !important;
+    background-color: #DA291C;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.donation-card h1{
+    width: 100%;
+    text-align: center;
+    padding: 10px 5%;
+    color: #DA291C;
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+    font-family: Oswald, sans-serif;
+    margin-bottom: 2rem;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;   
+}
+
+.form-group{
+    width: 90%;
+    position: relative;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 0;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+.form-group i{
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 10px;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;    
+    left: 10px;
+    background: #DA291C;
+    
+}
+
+.form-group input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    position: absolute;
+    background: transparent;
+    left: 0;
+    text-indent: 60px;
+}
+
+.form-group label{
+    width: 100%;
+    text-indent: 60px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.3);
+}
+button{
+    width: 90%;
+    height: 50px;
+    margin: 10px 0 10px 5%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #DA291C;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.assignment button{
+    font-size: 1rem !important;
+    height: 30px;
+}
+
+.progress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.line{
+    width: 17%;
+    height: 4px;
+    background: #DA291C;
+    -webkit-transition: all 1s ease;
+}
+
+.point{
+    width: 20px;
+    height: 20px;
+    background: #DA291C;
+    border-radius: 50%;
+    -webkit-transition: all 1s ease;
+}
+
+.d-none{
+    display: none;
+}
+
+.cards{
+    width: 100%;
+    height: 90vh;
+    box-shadow: 0px -10px 10px rgba(0,0,0,.1);
+}
+
+.card{
+    height: 100%;
+}
+
+.home-card .header, .stats-card .header, .historic-card .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 32%;
+    background: #da291c;
+    padding: 5% 10%;
+    color: white;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: Oswald, sans-serif;
+}
+
+.row i{
+    font-size: 1.5rem;
+}
+
+.home-card .header .date{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;    
+    border-radius: 30px;
+}
+
+
+.home-card .header .date *{
+    font-size: 1.4rem;
+}
+
+.assignments{
+    width: 100%;
+    height: 77%;    
+    overflow-y: scroll;
+    position: relative;
+    top: -60px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    padding: 0 10% 50px 10%;
+}
+
+.assignments::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.assignment{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+.assignment:first-child{
+    margin-top: 20px;
+}
+
+.assignment h3{
+    font-family: Oswald, sans-serif;
+    color: #DA291C;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.assignment .datas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.assignment .datas > div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.assignment .datas > div:nth-child(2){
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.assignment .datas a{
+    background-color: #DA291C;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.sync{
+    border-radius: 10px;
+    bottom: -30px;
+    width: 80%;
+    height: 50px;
+    margin-top: 30px !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.sync span{
+    font-size: 20px;
+}
+
+.sync button{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: black;
+    background-color: white;
+}
+
+.sync-card .header{
+    color: white;
+    height: 30%;
+    position: relative;
+    background-color: #DA291C;
+}
+
+.sync-card h2{
+    font-size: 20px !important;
+}
+
+.sync-card .assignments{
+    top: 20px;
+    height: calc(66%);
+}
