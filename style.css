@@ -95,15 +95,16 @@ form{
     padding: 13px 0;
     border-radius: 20px;
     margin: 10px auto;
+    height: 50px;
 }
 
 .form-group i{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     margin-right: 10px;
     border-radius: 40px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,18 +119,30 @@ form{
     height: 100%;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: absolute;
     background: transparent;
     left: 0;
     text-indent: 60px;
+    padding-top: 20px;
+}
+
+.form-group input:placeholder-shown{
+    padding-top: 0;
+}
+
+.form-group input:placeholder-shown ~ label{
+    color: transparent !important;
 }
 
 .form-group label{
-    width: 100%;
-    text-indent: 60px;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.3);
+    color: gray;
+    position: absolute;
+    left: 60px;
+    top: 5px;
+    font-size: .7rem;
+    -webkit-transition: 1s ease all;
 }
 button{
     width: 90%;

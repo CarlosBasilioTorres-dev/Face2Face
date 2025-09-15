@@ -7,252 +7,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
 </head>
 
 <body>
-    <div class="app">
-        <div class="cards">
-            <div class="card home-card">
-                <div class="header">
-                    <div class="row">
-                        <h2>Próximas <br> asignaciones</h2>
-                        <div class="search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <i class="fa-solid fa-calendar"></i>
-                        <span>Elige una fecha</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+<div class="app">
+    <div class="cards">
+        <div class="card home-card d-none">
+            <div class="header">
+                <div class="row">
+                    <h2>Próximas <br> asignaciones</h2>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
-                <div class="assignments">
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                <div class="date">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span>Elige una fecha</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="assignments">
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
-                    <div class="assignment">
-                        <h3>Asignación 1</h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Fecha</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="time">
-                                <span>Hora</span>
-                                <span class="value">10:00 AM</span>
-                            </div>
-                            <div class="location">
-                                <span>Ubicación</span>
-                                <a href class="value">Sala 101</a>
-                            </div>
+                </div>
+                <div class="assignment">
+                    <h3>Asignación 1</h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Fecha</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="time">
+                            <span>Hora</span>
+                            <span class="value">10:00 AM</span>
+                        </div>
+                        <div class="location">
+                            <span>Ubicación</span>
+                            <a href class="value">Sala 101</a>
                         </div>
                     </div>
+                </div>
 
-                </div>
             </div>
-            <div class="card sync-card  d-none">
-                <div class="header">
-                    <div class="row flex-center column">
-                        <h2>Tienes 10 elementos por sincronizar</h2>
-                        <div class="sync">
-                            <button>
-                                Sincronizar ahora
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="assignments">
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
+        </div>
+        <div class="card sync-card  d-none">
+            <div class="header">
+                <div class="row flex-center column">
+                    <h2>Tienes 10 elementos por sincronizar</h2>
+                    <div class="sync">
+                        <button>
+                            Sincronizar ahora
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="card donation-card d-none">
-                <h1>Formulario de Donación</h1>
-                <div class="progress">
-                    <div class="line line-1"></div>
-                    <div class="point point-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="point point-2"></div>
-                    <div class="line line-3"></div>
-                    <div class="point point-3"></div>
-                    <div class="line line-4"></div>
-                    <div class="point point-4"></div>
-                    <div class="line line-5"></div>
+            <div class="assignments">
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="donation">
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card donation-card">
+            <h1>Formulario de Donación</h1>
+            <div class="progress">
+                <div class="line line-1"></div>
+                <div class="point point-1"></div>
+                <div class="line line-2"></div>
+                <div class="point point-2"></div>
+                <div class="line line-3"></div>
+                <div class="point point-3"></div>
+                <div class="line line-4"></div>
+                <div class="point point-4"></div>
+                <div class="line line-5"></div>
+            </div>
+            <div class="donation">
+                <div class="donation-p1">
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" name="name" required placeholder="Nombre(s)">
                         <label for="name">Nombre(s):</label>
-                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
@@ -274,97 +278,161 @@
                     <div class="form-group">
                         <i class="fa-solid fa-phone"></i>
                         <label for="email">Teléfon para llamadas:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="number" id="email" name="email" required inputmode="numeric">
                     </div>
 
                     <div class="form-group">
                         <i class="fa-brands fa-whatsapp"></i>
                         <label for="email">Teléfon para WP:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="number" id="email" name="email" required>
                     </div>
-
+                </div>
+                <div class="donation-p2 d-none">
                     <div class="form-group">
-
+                        <i class="fab fa-usps"></i>
+                        <label for="">Código postal</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">País</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">Estado</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">Ciudad</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">Fecha de nacimiento</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">Ciudad</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <label for="">Género</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="donation-p3 d-none">
+                    <div class="form-group">
                         <label for="amount">Cantidad a Donar:</label>
                         <input type="number" id="amount" name="amount" required>
                     </div>
+                    <div class="form-group">
+                        <label for="amount">Periodicidad:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
 
-                    <button type="submit">Continuar</button>
+                    <div class="form-group">
+                        <label for="amount">Método de cobro:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Número de tarjeta:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Banco:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Fecha de vencimiento:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">¿Requiere factura?</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
                 </div>
+                <button type="submit">Continuar</button>
             </div>
-            <div class="card stats-card d-none">
-                <div class="header">
-                    <div class="row flex-center">
-                        <h2>Próximas asignaciones</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="card historic-card d-none">
-                <div class="header">
-                    <div class="row flex-center">
-                        <h2>Mis recaudacioes</h2>
-                    </div>
-                </div>
-                <div class="assignments">
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="assignment">
-                        <h3>Donante 1 </h3>
-                        <div class="datas">
-                            <div class="date">
-                                <span>Monto</span>
-                                <span class="value">$1,500.00</span>
-                            </div>
-                            <div class="time">
-                                <span>Fecha y hora</span>
-                                <span class="value">19/08/2025</span>
-                            </div>
-                            <div class="location">
-                                <button>Ver detalles</button>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <div class="card stats-card d-none">
+            <div class="header">
+                <div class="row flex-center">
+                    <h2>Próximas asignaciones</h2>
                 </div>
             </div>
         </div>
-        <div class="menu">
-            <div class="card" id="home"><i class="fa-solid fa-house"></i></div>
-            <div class="card" id="sync"><i class="fa-solid fa-rotate"></i></div>
-            <div class="card main" id="donation"><i class="fa-solid fa-plus"></i></div>
-            <div class="card " id="stats"><i class="fa-solid fa-chart-simple"></i></div>
-            <div class="card " id="historic"><i class="fa-solid fa-clipboard"></i></div>
+        <div class="card historic-card d-none">
+            <div class="header">
+                <div class="row flex-center">
+                    <h2>Mis recaudacioes</h2>
+                </div>
+            </div>
+            <div class="assignments">
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment">
+                    <h3>Donante 1 </h3>
+                    <div class="datas">
+                        <div class="date">
+                            <span>Monto</span>
+                            <span class="value">$1,500.00</span>
+                        </div>
+                        <div class="time">
+                            <span>Fecha y hora</span>
+                            <span class="value">19/08/2025</span>
+                        </div>
+                        <div class="location">
+                            <button>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    <div class="menu">
+        <div class="card" id="home"><i class="fa-solid fa-house"></i></div>
+        <div class="card" id="sync"><i class="fa-solid fa-rotate"></i></div>
+        <div class="card main" id="donation"><i class="fa-solid fa-plus"></i></div>
+        <div class="card " id="stats"><i class="fa-solid fa-chart-simple"></i></div>
+        <div class="card " id="historic"><i class="fa-solid fa-clipboard"></i></div>
+    </div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
