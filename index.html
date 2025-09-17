@@ -252,22 +252,22 @@
                 <div class="line line-5"></div>
             </div>
             <div class="donation">
-                <div class="donation-p1">
+                <div class="donation-p1 d-none">
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" id="name" required placeholder="Nombre(s)">
-                        <label for="name">Nombre(s):</label>
+                        <input type="text" id="nombre" required placeholder="Nombre(s)">
+                        <label for="nombre">Nombre(s):</label>
                     </div>
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="last_name_1" required placeholder="Apellido paterno">
-                        <label for="name">Apellido paterno:</label>
+                        <label for="last_name_1">Apellido paterno:</label>
                     </div>
 
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="last_name_2"  required placeholder="Apellido materno">
-                        <label for="name">Apellido materno:</label>
+                        <label for="last_name_2">Apellido materno:</label>
                     </div>
                     <div class="form-group">
                         <i class="fa-solid fa-at"></i>
@@ -278,86 +278,109 @@
                     <div class="form-group">
                         <i class="fa-solid fa-phone"></i>
                         <input type="number" id="phone_1" required inputmode="numeric" placeholder="Teléfono para llamadas">
-                        <label for="email">Teléfono para llamadas:</label>
+                        <label for="phone_1">Teléfono para llamadas:</label>
                     </div>
 
                     <div class="form-group">
                         <i class="fa-brands fa-whatsapp"></i>
                         <input type="number" id="phone_2" required placeholder="Teléfono para whatsapp">
-                        <label for="email">Teléfon para WP:</label>
+                        <label for="phone_2">Teléfon para WP:</label>
                     </div>
                 </div>
                 <div class="donation-p2 d-none">
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
+                        <input type="text" id="cp" placeholder="Código postal">
                         <label for="">Código postal</label>
-                        <input type="text">
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
+                        <input type="text" id="país" placeholder="País">
                         <label for="">País</label>
-                        <input type="text">
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
+                        <input type="text" id="estado" placeholder="Estado" >
                         <label for="">Estado</label>
-                        <input type="text">
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
+                        <input type="text" id="ciudad" placeholder="Ciudad">
                         <label for="">Ciudad</label>
-                        <input type="text">
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
+                        <input type="text" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
                         <label for="">Fecha de nacimiento</label>
-                        <input type="text">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group select">
                         <i class="fab fa-usps"></i>
-                        <label for="">Ciudad</label>
-                        <input type="text">
-                    </div>
-                    <div class="form-group">
-                        <i class="fab fa-usps"></i>
+                        <select id="" required>
+                            <option value="" disabled selected>Género</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Prefiero no decir</option>
+                        </select>
                         <label for="">Género</label>
-                        <input type="text">
                     </div>
                 </div>
-                <div class="donation-p3 d-none">
+                <div class="donation-p3 ">
                     <div class="form-group">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <input type="number" id="amount" required placeholder="Cantidad a donar">
                         <label for="amount">Cantidad a Donar:</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group select">
+                        <i class="fa-solid fa-calendar"></i>
+                        <select id="periodicidad" required="">
+                            <option value="" disabled selected>Periodicidad</option>
+                            <option value="Único">Único</option>
+                            <option value="Mensual"> Mensual</option>
+                            <option value="Bimestral">Bimestral</option>
+                            <option value="Trimestral">Trimestral</option>
+                            <option value="Semestral">Semestral</option>
+                            <option value="Anual">Anual</option>
+                        </select>
                         <label for="amount">Periodicidad:</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group select">
+                        <i class="fa-solid fa-receipt"></i>
+                        <select name="" id="metodo_corbro" required>
+                            <option value="" disabled selected>Método de cobro</option>
+                            <option value="Izzetle">Izettle</option>
+                            <option value="Stripe">Stripe</option>
+                        </select>
                         <label for="amount">Método de cobro:</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
 
                     <div class="form-group">
+                        <i class="fa-solid fa-credit-card"></i> <!-- icono por defecto -->
+                        <input type="text" id="tarjeta" placeholder="Número de tarjeta">
                         <label for="amount">Número de tarjeta:</label>
-                        <input type="number" id="amount" name="amount" required>
+                        <i id="card-icon" class="fa-solid fa-credit-card right-icon"></i> <!-- icono por defecto -->
                     </div>
                     <div class="form-group">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <input type="text" id="Banco" required placeholder="Banco">
                         <label for="amount">Banco:</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
                     <div class="form-group">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <input type="text" id="fecha_vencimiento"  placeholder="Fecha de vencimiento" required>
                         <label for="amount">Fecha de vencimiento:</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group select is-valid">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        <select name="" id="requiere_factura" required>
+                            <option value="Si">Si</option>
+                            <option value="No" selected>No</option>
+                        </select>
                         <label for="amount">¿Requiere factura?</label>
-                        <input type="number" id="amount" name="amount" required>
                     </div>
                 </div>
-                <button type="submit">Continuar</button>
+                <button type="submit" class="disabled" disabled>Continuar</button>
             </div>
         </div>
         <div class="card stats-card d-none">
@@ -433,6 +456,7 @@
         <div class="card " id="historic"><i class="fa-solid fa-clipboard"></i></div>
     </div>
 </div>
-<script src="app.js"></script>
+<script src="JS/app.js"></script>
+<script src="JS/Validations.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+var step = 1;
+
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js")
         .then(() => console.log("SW registrado"))
@@ -23,3 +25,9 @@ Object.entries(sections).forEach(([btnId, cardClass]) => {
         document.querySelector(`.${cardClass}`).classList.remove("d-none");
     });
 });
+
+document.querySelector(".donation button").addEventListener("click", (e) => {
+    const current = step++
+    document.querySelector(".donation-p"+current).classList.add("d-none");
+    document.querySelector(".donation-p"+step).classList.remove("d-none");
+})

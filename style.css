@@ -93,7 +93,7 @@ form{
     padding: 13px 0;
     border-radius: 20px;
     margin: 10px auto;
-    height: 50px;
+    height: 43px;
 }
 
 .form-group i{
@@ -109,10 +109,25 @@ form{
     position: absolute;    
     left: 10px;
     background: #DA291C;
-    
 }
 
-.form-group input{
+/* Icono derecho */
+.form-group .right-icon {
+    font-size: 2rem;
+    color: gray;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    left: unset;
+    background: white;
+}
+
+
+.form-group input, .form-group select{
     width: 100%;
     height: 100%;
     border: none;
@@ -120,17 +135,28 @@ form{
     font-size: 1rem;
     position: absolute;
     background: transparent;
+    color: gray;
     left: 0;
     text-indent: 60px;
     padding-top: 20px;
     -webkit-transition: .3s all ease-in-out;
 }
 
+select:invalid{
+    padding-top: 0;
+    text-indent: 55px;
+}
+
+select:valid{
+    padding-top: 20px;
+    text-indent: 55px;
+}
+
 .form-group input:placeholder-shown{
     padding-top: 0;
 }
 
-.form-group input:placeholder-shown ~ label{
+.form-group input:placeholder-shown ~ label, select:invalid ~ label{
     color: transparent !important;
 }
 
@@ -360,4 +386,17 @@ button{
 .sync-card .assignments{
     top: 20px;
     height: calc(66%);
+}
+
+.is-valid label,.is-valid input, .is-valid select{
+    color: #198754;
+}
+
+.is-invalid label,.is-invalid input, .is-invalid select{
+    color: #DA291C;
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
