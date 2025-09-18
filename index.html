@@ -250,9 +250,11 @@
                 <div class="line line-4"></div>
                 <div class="point point-4"></div>
                 <div class="line line-5"></div>
+                <div class="point point-5 d-none"></div>
+                <div class="line line-6 d-none"></div>
             </div>
             <div class="donation">
-                <div class="donation-p1 ">
+                <div class="donation-p1 d-none">
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="nombre" required placeholder="Nombre(s)">
@@ -324,7 +326,7 @@
                         <label for="">Género</label>
                     </div>
                 </div>
-                <div class="donation-p3 d-none">
+                <div class="donation-p3 ">
                     <div class="form-group">
                         <i class="fa-solid fa-money-bill"></i>
                         <input type="number" id="amount" required placeholder="Cantidad a donar">
@@ -348,10 +350,16 @@
                         <i class="fa-solid fa-receipt"></i>
                         <select name="" id="metodo_corbro" required>
                             <option value="" disabled selected>Método de cobro</option>
-                            <option value="Izzetle">Izettle</option>
+                            <option value="Izetle">Izettle</option>
                             <option value="Stripe">Stripe</option>
+                            <option value="Pendiente">Pendiente</option>
                         </select>
                         <label for="amount">Método de cobro:</label>
+                    </div>
+                    <div class="form-group d-none">
+                        <i class="fa-solid fa-receipt"></i>
+                        <input type="text" id="confirmacion" placeholder="Código de confirmación">
+                        <label for="">Código de confirmación</label>
                     </div>
 
                     <div class="form-group">
@@ -379,6 +387,9 @@
                         </select>
                         <label for="amount">¿Requiere factura?</label>
                     </div>
+                </div>
+                <div class="donation-p4 d-none">
+
                 </div>
                 <button type="submit" class="disabled" disabled>Continuar</button>
             </div>

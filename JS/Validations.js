@@ -279,3 +279,8 @@ document.getElementById("requiere_factura").addEventListener("change",          
 document.getElementById("tarjeta").addEventListener("input",                        checkContinue);
 document.getElementById("Banco").addEventListener("input",                          checkContinue);
 document.getElementById("fecha_vencimiento").addEventListener("input",              checkContinue);
+document.getElementById("confirmacion").addEventListener("input",checkContinue);
+document.getElementById("confirmacion").addEventListener("input",event=>{
+    event.target.value.length >3 ? isValid(event.target): isInvalid(event.target)
+});
+

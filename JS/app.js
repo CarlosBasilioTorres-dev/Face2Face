@@ -31,3 +31,28 @@ document.querySelector(".donation button").addEventListener("click", (e) => {
     document.querySelector(".donation-p"+current).classList.add("d-none");
     document.querySelector(".donation-p"+step).classList.remove("d-none");
 })
+
+document.getElementById("requiere_factura").addEventListener('change', (e) => {
+    const value = e.target.value;
+    if (value === "Si"){
+        document.querySelector(".point-5").classList.remove("d-none");
+        document.querySelector(".line-6").classList.remove("d-none");
+    }else{
+        document.querySelector(".point-5").classList.add("d-none");
+        document.querySelector(".line-6").classList.add("d-none");
+    }
+})
+
+document.getElementById("metodo_corbro").addEventListener('change', (e) => {
+    // debugger
+    const value = e.target.value;
+    if (value.localeCompare("Izetle") === 0){
+        document.getElementById("confirmacion").parentElement.classList.remove("d-none");
+        document.getElementById("confirmacion").parentElement.classList.remove("is-valid");
+        document.getElementById("confirmacion").parentElement.classList.add("is-invalid");
+    }else{
+        // document.getElementById("confirmacion").parentElement.classList.add("d-none");
+        document.getElementById("confirmacion").parentElement.classList.add("is-valid");
+        document.getElementById("confirmacion").parentElement.classList.remove("is-invalid");
+    }
+})
