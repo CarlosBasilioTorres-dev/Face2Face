@@ -22,6 +22,13 @@
 <body>
 <div class="app">
     <div class="cards">
+        <div class="loading">
+            <div class="loader"></div>
+            <h2>Cargando códigos postales</h2>
+            <div class="progress">
+                <h3>0%</h3>
+            </div>
+        </div>
         <div class="card home-card">
             <div class="header">
                 <div class="row">
@@ -467,7 +474,10 @@
         <div class="card " id="historic"><i class="fa-solid fa-clipboard"></i></div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
 <script src="JS/app.js"></script>
 <script src="JS/Validations.js"></script>
+<script src="JS/DBS.js"></script>
+
 </body>
 </html>
