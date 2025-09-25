@@ -1,10 +1,12 @@
 {
   "name": "StreetGiving",
-  "short_name": "SG",
+  "short_name": "Facers",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#000000",
   "theme_color": "#000000",
+  "orientation": "portrait",
+
   "icons": [
     {
       "src": "st.jpg",
@@ -12,4 +14,5 @@
       "type": "image/png"
     }
   ]
+
 }
