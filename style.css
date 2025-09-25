@@ -469,3 +469,12 @@ button{
 .loading h3{
     margin-top: 10px;
 }
+
+.form-group input,
+.form-group select {
+    -webkit-appearance: none; /* quita estilo por defecto iOS */
+    border-radius: 0;         /* evita bordes redondeados automáticos */
+    line-height: normal;      /* corrige alineación */
+    padding: 20px 0 0 60px;   /* usa padding en vez de text-indent+top */
+    box-sizing: border-box;   /* asegura cálculos correctos */
+}
