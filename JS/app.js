@@ -2,7 +2,6 @@ var step = 1;
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js")
-        .then(() => console.log("SW registrado"))
         .catch(err => console.error("Error SW:", err));
 }else{
     const el = document.documentElement
