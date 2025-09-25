@@ -1,5 +1,4 @@
 importScripts("JS/sw-utils.js")
-
 /*declarar nombres de caches*/
 
 const STATIC_CACHE = "static-v1";
