@@ -29,7 +29,7 @@
                 <h3>0%</h3>
             </div>
         </div>
-        <div class="card home-card">
+        <div class="card home-card d-none">
             <div class="header">
                 <div class="row">
                     <h2>Próximas <br> asignaciones</h2>
@@ -245,7 +245,7 @@
                 </div>
             </div>
         </div>
-        <div class="card donation-card d-none">
+        <div class="card donation-card">
             <h1>Formulario de Donación</h1>
             <div class="progress">
                 <div class="line line-1"></div>
@@ -261,7 +261,7 @@
                 <div class="line line-6 d-none"></div>
             </div>
             <div class="donation">
-                <div class="donation-p1 ">
+                <div class="donation-p1">
                     <div class="form-group">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="nombre" required placeholder="Nombre(s)">
@@ -296,15 +296,15 @@
                         <label for="phone_2">Teléfon para WP:</label>
                     </div>
                 </div>
-                <div class="donation-p2 d-none">
+                <div class="donation-p2 d-none ">
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
                         <input type="text" id="cp" placeholder="Código postal">
                         <label for="">Código postal</label>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group is-valid">
                         <i class="fab fa-usps"></i>
-                        <input type="text" id="país" placeholder="País">
+                        <input type="text" id="país" placeholder="País" value="México">
                         <label for="">País</label>
                     </div>
                     <div class="form-group">
@@ -314,8 +314,15 @@
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
-                        <input type="text" id="ciudad" placeholder="Ciudad">
-                        <label for="">Ciudad</label>
+                        <input type="text" id="municipio" placeholder="Municipio">
+                        <label for="">Municipio</label>
+                    </div>
+                    <div class="form-group">
+                        <i class="fab fa-usps"></i>
+                        <select id="colonia" required>
+                            <option value="" disabled selected>Colonia</option>
+                        </select>
+                        <label for="">Colonia</label>
                     </div>
                     <div class="form-group">
                         <i class="fab fa-usps"></i>
@@ -334,10 +341,13 @@
                     </div>
                 </div>
                 <div class="donation-p3 d-none">
-                    <div class="form-group">
-                        <i class="fa-solid fa-money-bill"></i>
+                    <div class="amounts">
+                        <button value="100">100</button>
+                        <button value="200">200</button>
+                        <button value="500">500</button>
+                    </div>
+                    <div class="form-group d-none">
                         <input type="number" id="amount" required placeholder="Cantidad a donar">
-                        <label for="amount">Cantidad a Donar:</label>
                     </div>
                     <div class="form-group select">
                         <i class="fa-solid fa-calendar"></i>
@@ -377,7 +387,7 @@
                     </div>
                     <div class="form-group">
                         <i class="fa-solid fa-building-columns"></i>
-                        <input type="text" id="Banco" required placeholder="Banco">
+                        <input type="text" id="banco" required placeholder="Banco">
                         <label for="amount">Banco:</label>
                     </div>
                     <div class="form-group">

@@ -37,11 +37,42 @@ const validatePhone = (event) => {
     regex.test(input.value.trim()) ? isValid(input) : isInvalid(input);
 }
 
+const buscar = async (cp) => {
+    try{
+        const doc = await db.get(cp)
+        return doc
+    }catch(error){
+        return error;
+    }
+}
+
 // Validar código postal (5 dígitos México)
-const validateCP = (event) => {
+const validateCP = async (event) => {
     const input = event.target;
     const regex = /^[0-9]{5}$/;
-    regex.test(input.value.trim()) ? isValid(input) : isInvalid(input);
+    if (regex.test(input.value.trim())) {
+        isValid(input)
+        const db = new PouchDB("codigo_postal")
+        const value = await buscar(input.value.trim())
+        if (value.error){
+
+        }else{
+            document.getElementById("estado").value = value.estado
+            document.getElementById("municipio").value = value.municipio
+            document.getElementById("colonia").innerHTML = ""
+            isValid(document.getElementById("estado"))
+            isValid(document.getElementById("municipio"))
+            isValid(document.getElementById("colonia"))
+            value.colonias.forEach(element=>{
+                var option = document.createElement("option");
+                option.value = element;
+                option.text = element;
+                document.getElementById("colonia").appendChild(option);
+            })
+        }
+    }else {
+        isInvalid(input);
+    }
 }
 
 // Validar país, estado y ciudad (letras y espacios)
@@ -120,8 +151,20 @@ const detectCardType = (num) => {
     else return 'unknown';
 }
 
+const buscarTarjeta = async (bin) => {
+    const bd = new PouchDB("banco")
+
+    try{
+        const doc = await bd.get(bin)
+        return doc
+    }catch(error){
+        return error;
+    }
+}
+
+
 // Validar y formatear tarjeta con icono
-const validateCard = (event) => {
+const validateCard = async (event) => {
     const input = event.target;
     const icon = document.getElementById("card-icon"); // icono derecho
     let cursorPos = input.selectionStart;
@@ -158,8 +201,20 @@ const validateCard = (event) => {
     input.setSelectionRange(cursorPos, cursorPos);
 
 // Validación Luhn
-    const isValidCard = value.length >= 12 && luhnCheck(value);
-    isValidCard ? isValid(input) : isInvalid(input);
+    const isValidCard = value.length >= 15 && luhnCheck(value);
+    if (isValidCard)
+    {
+        let aux = input.value
+        aux = aux.replaceAll("-","")
+        aux = aux.substring(0,6)
+        var banco = await buscarTarjeta(aux)
+        document.getElementById("banco").value = banco.banco;
+        isValid(input)
+        isValid(document.getElementById("banco"))
+    }else
+    {
+        isInvalid(input)
+    }
 
 // Actualizar icono derecho SIN afectar el izquierdo
     icon.className = `right-icon ${cardIcons[type] || 'fa-solid fa-credit-card'}`;
@@ -230,11 +285,11 @@ const checkContinue = (evt) => {
     })
 
     if (!pass) {
-        container.parentElement.querySelector("button").classList.add("disabled")
-        container.parentElement.querySelector("button").setAttribute("disabled", "disabled");
+        container.parentElement.querySelector(".donation > button").classList.add("disabled")
+        container.parentElement.querySelector(".donation > button").setAttribute("disabled", "disabled");
     }else{
-        container.parentElement.querySelector("button").classList.remove("disabled")
-        container.parentElement.querySelector("button").removeAttribute("disabled");
+        container.parentElement.querySelector(".donation > button").classList.remove("disabled")
+        container.parentElement.querySelector(".donation > button").removeAttribute("disabled");
     }
 }
 
@@ -248,7 +303,7 @@ document.getElementById("phone_2").addEventListener("input", validatePhone);
 document.getElementById("cp").addEventListener("input", validateCP);
 document.getElementById("país").addEventListener("input", validateText);
 document.getElementById("estado").addEventListener("input", validateText);
-document.getElementById("ciudad").addEventListener("input", validateText);
+document.getElementById("municipio").addEventListener("input", validateText);
 document.getElementById("fecha_nacimiento").addEventListener("input", validateDate);
 document.querySelector(".form-group.select select").addEventListener("change", validateSelect);
 
@@ -257,7 +312,7 @@ document.getElementById("periodicidad").addEventListener("change", validateSelec
 document.getElementById("metodo_corbro").addEventListener("change", validateSelect);
 document.getElementById("requiere_factura").addEventListener("change", validateSelect);
 document.getElementById("tarjeta").addEventListener("input", validateCard);
-document.getElementById("Banco").addEventListener("input", validateBank);
+document.getElementById("banco").addEventListener("input", validateBank);
 document.getElementById("fecha_vencimiento").addEventListener("input", validateExpiry);
 
 document.getElementById("nombre").addEventListener("input",                         checkContinue);
@@ -269,7 +324,7 @@ document.getElementById("phone_2").addEventListener("input",                    
 document.getElementById("cp").addEventListener("input",                             checkContinue);
 document.getElementById("país").addEventListener("input",                           checkContinue);
 document.getElementById("estado").addEventListener("input",                         checkContinue);
-document.getElementById("ciudad").addEventListener("input",                         checkContinue);
+document.getElementById("municipio").addEventListener("input",                         checkContinue);
 document.getElementById("fecha_nacimiento").addEventListener("input",               checkContinue);
 document.querySelector(".form-group.select select").addEventListener("change",      checkContinue);
 document.getElementById("amount").addEventListener("input",                         checkContinue);
@@ -277,7 +332,7 @@ document.getElementById("periodicidad").addEventListener("change",              
 document.getElementById("metodo_corbro").addEventListener("change",                 checkContinue);
 document.getElementById("requiere_factura").addEventListener("change",              checkContinue);
 document.getElementById("tarjeta").addEventListener("input",                        checkContinue);
-document.getElementById("Banco").addEventListener("input",                          checkContinue);
+document.getElementById("banco").addEventListener("input",                          checkContinue);
 document.getElementById("fecha_vencimiento").addEventListener("input",              checkContinue);
 document.getElementById("confirmacion").addEventListener("input",checkContinue);
 document.getElementById("confirmacion").addEventListener("input",event=>{

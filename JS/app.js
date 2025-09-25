@@ -26,10 +26,12 @@ Object.entries(sections).forEach(([btnId, cardClass]) => {
     });
 });
 
-document.querySelector(".donation button").addEventListener("click", (e) => {
+document.querySelector(".donation > button").addEventListener("click", (e) => {
     const current = step++
     document.querySelector(".donation-p"+current).classList.add("d-none");
     document.querySelector(".donation-p"+step).classList.remove("d-none");
+    e.target.classList.add("disabled");
+    e.target.setAttribute("disabled", "disabled");
 })
 
 document.getElementById("requiere_factura").addEventListener('change', (e) => {
@@ -55,4 +57,20 @@ document.getElementById("metodo_corbro").addEventListener('change', (e) => {
         document.getElementById("confirmacion").parentElement.classList.add("is-valid");
         document.getElementById("confirmacion").parentElement.classList.remove("is-invalid");
     }
+})
+
+document.querySelectorAll(".amounts button").forEach(item => {
+    item.addEventListener("click", () => {
+
+        document.querySelectorAll(".amounts button").forEach(btn => {
+            btn.style.background = "white"
+            btn.style.color = "black";
+        })
+
+        item.style.background = "#da291c"
+        item.style.color = "#ffffff"
+
+        document.getElementById("amount").value = item.value;
+        isValid(document.getElementById("amount"))
+    })
 })
